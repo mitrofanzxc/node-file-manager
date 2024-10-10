@@ -1,0 +1,22 @@
+{
+  "name": "node-file-manager",
+  "version": "1.0.0",
+  "description": "RSS Task to implement File Manager using Node.js APIs. https://github.com/AlreadyBored/nodejs-assignments/blob/main/assignments/file-manager/assignment.md",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "type": "module",
+  "scripts": {
+    "start": "node ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mitrofanzxc/node-file-manager.git"
+  },
+  "author": "mitrofanzxc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mitrofanzxc/node-file-manager/issues"
+  },
+  "homepage": "https://github.com/mitrofanzxc/node-file-manager"
+}
