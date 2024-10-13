@@ -1,19 +1,29 @@
-export const ERROR_MESSAGE = "Operation failed";
-export const INVALID_INPUT_ERROR_MESSAGE = "Invalid input";
-
-export const EXIT_COMMAND = ".exit";
-
-export const DEFAULT_USER_NAME = "Username";
-
-export const GHZ = "GHz";
-
-export const Number = {
-    ONE: 1,
-    TWO: 2,
-    THOUSAND: 1000,
+export const ErrorMessage = {
+    COMMON: "Operation failed",
+    UNKNOWN: "An unknown error has occurred. Please check your path and arguments!",
+    INPUT: "Invalid input. Please check it!",
+    PATH: "Invalid path. Please check it!",
+    FILE_NAME: "Invalid filename. Please check it!",
+    DIR_NAME: "Invalid dirname. Please check it!",
+    COPY: "Copy operation failed. Please check your arguments!",
+    CREATE: "Create operation failed. Please check your arguments!",
+    READ: "Create operation failed. Please check your arguments!",
+    MOVE: "Create operation failed. Please check your arguments!",
+    HASH: "Hash operation failed. Please check your arguments!",
+    COMPRESS: "Compress operation failed. Please check your arguments!",
+    DECOMPRESS: "Decompress operation failed. Please check your arguments!",
+    ZIP: "Zip operation failed. Please check your arguments!",
+    BASIC: "Basic operation failed. Please check your arguments!",
+    OS: "System operation failed. Please check your arguments!",
+    NAVIGATION: "Navigation operation failed. Please check your arguments!",
 };
 
-export const Colors = {
+export const DEFAULT_USER_NAME = "UserName";
+export const ALGORITHM = "sha256";
+export const ENCODING = "hex";
+export const GHZ = "GHz";
+
+export const Color = {
     WHITE: "\u001b[37m",
     RESET: "\u001b[0m",
     GREEN: "\u001b[32m",
@@ -38,7 +48,7 @@ export const OperationType = {
     EXIT: ".exit",
 };
 
-export const BasicOperations = {
+export const BasicOperation = {
     CAT: "cat",
     ADD: "add",
     RN: "rn",
@@ -47,13 +57,13 @@ export const BasicOperations = {
     RM: "rm",
 };
 
-export const NavigationOperations = {
+export const NavigationOperation = {
     UP: "up",
     CD: "cd",
     LS: "ls",
 };
 
-export const ZipOperations = {
+export const ZipOperation = {
     COMPRESS: "compress",
     DECOMPRESS: "decompress",
 };

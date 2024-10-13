@@ -1,10 +1,10 @@
-import { Colors } from "../constants/index.js";
+import { Color } from "../constants/index.js";
 
-export const colorText = (text = "", color = Colors.WHITE) => {
+export const colorText = (text = "", color = Color.WHITE) => {
     try {
-        const colorToPrint = Colors?.[color] || Colors.WHITE;
+        const colorToPrint = Color?.[color] || Color.WHITE;
 
-        return `${colorToPrint}${text}${Colors.RESET}`;
+        return `${colorToPrint}${text}${Color.RESET}`;
     } catch {
         return text;
     }

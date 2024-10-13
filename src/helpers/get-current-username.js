@@ -1,7 +1,11 @@
+import { argv } from "node:process";
+
 import { DEFAULT_USER_NAME, Separator } from "../constants/index.js";
 
-export const getCurrentUserName = (userName) => {
+export const getCurrentUserName = () => {
     try {
+        const userName = argv?.[2] || DEFAULT_USER_NAME;
+
         if (!userName) {
             return DEFAULT_USER_NAME;
         }

@@ -1,3 +1,4 @@
+export { calculateHash } from "./calc-hash.js";
 export { closeReadlinePromises } from "./close-readline-promises.js";
 export { colorText } from "./color-text.js";
 export { errorHandler } from "./error-handler.js";
@@ -14,3 +15,4 @@ export { showErrorMessage } from "./show-error-message.js";
 export { showGoodbye } from "./show-goodbye.js";
 export { showGreeting } from "./show-greeting.js";
 export { trimString } from "./trim-string.js";
+export { userInputHandler } from "./user-input-handler.js";

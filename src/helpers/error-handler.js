@@ -1,8 +1,8 @@
 import { showErrorMessage } from "./show-error-message.js";
 
-import { ERROR_MESSAGE } from "../constants/index.js";
+import { ErrorMessage } from "../constants/index.js";
 
-export const errorHandler = async (callback, errorMessage = ERROR_MESSAGE) => {
+export const errorHandler = async (callback, errorMessage = ErrorMessage.COMMON) => {
     try {
         await callback();
     } catch {

@@ -1,10 +1,10 @@
 import { colorText } from "./color-text.js";
 
-import { ERROR_MESSAGE, Colors } from "../constants/index.js";
+import { ErrorMessage, Color } from "../constants/index.js";
 
-export const showErrorMessage = (errorMessage = ERROR_MESSAGE) => {
+export const showErrorMessage = (errorMessage = ErrorMessage.COMMON) => {
     try {
-        const coloredText = colorText(errorMessage, Colors.RED);
+        const coloredText = colorText(errorMessage, Color.RED);
 
         console.log(coloredText);
     } catch {

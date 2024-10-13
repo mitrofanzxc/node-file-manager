@@ -1,5 +1,5 @@
 import { createInterface } from "node:readline/promises";
-import { argv, stdin, stdout } from "node:process";
+import { stdin, stdout } from "node:process";
 
 import {
     showGoodbye,
@@ -7,28 +7,34 @@ import {
     getCurrentUserName,
     showCurrentDir,
     showErrorMessage,
+    userInputHandler,
 } from "./src/helpers/index.js";
 
-import { DEFAULT_USER_NAME } from "./src/constants/index.js";
+import { ErrorMessage } from "./src/constants/index.js";
 
 const initFileManagerApp = async () => {
     try {
-        const argUserName = argv?.[2] || DEFAULT_USER_NAME;
-        const userName = getCurrentUserName(argUserName);
+        const userName = getCurrentUserName();
 
         showGreeting(userName);
+        showCurrentDir();
 
         const readlinePromises = createInterface({
             input: stdin,
             output: stdout,
         });
 
-        readlinePromises.on("line", () => {
+        readlinePromises.on("line", async (input) => {
+            await userInputHandler(input, readlinePromises);
             showCurrentDir();
         });
 
         readlinePromises.on("close", () => {
             showGoodbye(userName);
+        });
+
+        readlinePromises.on("error", () => {
+            showErrorMessage(ErrorMessage.UNKNOWN);
         });
     } catch {
         showErrorMessage();
