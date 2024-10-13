@@ -1,4 +1,4 @@
-import { ERROR_MESSAGE } from "../constants";
+import { ERROR_MESSAGE } from "../constants/index.js";
 
 export const closeReadlinePromises = (readlinePromises) => {
     try {

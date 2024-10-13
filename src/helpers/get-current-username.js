@@ -1,4 +1,4 @@
-import { DEFAULT_USER_NAME, SEPARATOR } from "../constants/index.js";
+import { DEFAULT_USER_NAME, Separator } from "../constants/index.js";
 
 export const getCurrentUserName = (userName) => {
     try {
@@ -6,7 +6,7 @@ export const getCurrentUserName = (userName) => {
             return DEFAULT_USER_NAME;
         }
 
-        return userName.split(SEPARATOR.Equal)[1] || DEFAULT_USER_NAME;
+        return userName.split(Separator.EQUAL)[1] || DEFAULT_USER_NAME;
     } catch {
         return DEFAULT_USER_NAME;
     }

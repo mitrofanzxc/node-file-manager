@@ -1,3 +1,5 @@
+export { closeReadlinePromises } from "./close-readline-promises.js";
+export { errorHandler } from "./error-handler.js";
 export { getArchitecture } from "./get-architecture.js";
 export { getCpusInfo } from "./get-cpus-info.js";
 export { getCurrentUserName } from "./get-current-username.js";

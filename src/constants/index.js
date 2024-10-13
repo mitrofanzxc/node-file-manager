@@ -7,17 +7,43 @@ export const DEFAULT_USER_NAME = "Username";
 
 export const GHZ = "GHz";
 
-export const NUMBER = {
-    One: 1,
-    Two: 2,
-    Thousand: 1000,
+export const Number = {
+    ONE: 1,
+    TWO: 2,
+    THOUSAND: 1000,
 };
 
-export const SEPARATOR = {
-    Equal: "=",
+export const Separator = {
+    EQUAL: "=",
 };
 
-export const FILE_TYPE = {
-    File: "file",
-    Directory: "directory",
+export const FileType = {
+    FILE: "file",
+    DIRECTORY: "directory",
+};
+
+export const OperationType = {
+    OS: "os",
+    HASH: "hash",
+    EXIT: ".exit",
+};
+
+export const BasicOperations = {
+    CAT: "cat",
+    ADD: "add",
+    RN: "rn",
+    CP: "cp",
+    MV: "mv",
+    RM: "rm",
+};
+
+export const NavigationOperations = {
+    UP: "up",
+    CD: "cd",
+    LS: "ls",
+};
+
+export const ZipOperations = {
+    COMPRESS: "compress",
+    DECOMPRESS: "decompress",
 };
