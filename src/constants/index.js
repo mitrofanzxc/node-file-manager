@@ -13,6 +13,16 @@ export const Number = {
     THOUSAND: 1000,
 };
 
+export const Colors = {
+    WHITE: "\u001b[37m",
+    RESET: "\u001b[0m",
+    GREEN: "\u001b[32m",
+    RED: "\u001b[31m",
+    YELLOW: "\u001b[33m",
+    BLUE: "\u001b[34m",
+    CYAN: "\u001b[36m",
+};
+
 export const Separator = {
     EQUAL: "=",
 };

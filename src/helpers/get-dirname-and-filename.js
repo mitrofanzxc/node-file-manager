@@ -1,7 +1,7 @@
 import { dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
-import { ERROR_MESSAGE } from "../constants/index.js";
+import { showErrorMessage } from "./show-error-message.js";
 
 export const getDirnameAndFilename = (metaUrl) => {
     try {
@@ -10,6 +10,6 @@ export const getDirnameAndFilename = (metaUrl) => {
 
         return { __filename, __dirname };
     } catch {
-        console.error(ERROR_MESSAGE);
+        showErrorMessage();
     }
 };

@@ -1,9 +1,14 @@
-import { ERROR_MESSAGE } from "../constants/index.js";
+import { colorText } from "./color-text.js";
+import { showErrorMessage } from "./show-error-message.js";
+
+import { Colors } from "../constants/index.js";
 
 export const showGreeting = (userName) => {
     try {
-        console.log(`Welcome to the File Manager, ${userName}!`);
+        const coloredText = colorText(`Welcome to the File Manager, ${userName}!`, Colors.GREEN);
+
+        console.log(coloredText);
     } catch {
-        console.error(ERROR_MESSAGE);
+        showErrorMessage();
     }
 };

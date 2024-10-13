@@ -1,6 +1,8 @@
 import { cpus } from "node:os";
 
-import { ERROR_MESSAGE, GHZ } from "../constants/index.js";
+import { showErrorMessage } from "./show-error-message.js";
+
+import { GHZ } from "../constants/index.js";
 
 export const getCpusInfo = () => {
     try {
@@ -11,6 +13,6 @@ export const getCpusInfo = () => {
 
         console.table(cpusInfo);
     } catch {
-        console.error(ERROR_MESSAGE);
+        showErrorMessage();
     }
 };

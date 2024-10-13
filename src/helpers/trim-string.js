@@ -1,4 +1,4 @@
-export const trimString = (string) => {
+export const trimString = (string = "") => {
     try {
         if (!string) {
             return "";

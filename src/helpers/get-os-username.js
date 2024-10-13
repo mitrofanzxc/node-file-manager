@@ -1,13 +1,13 @@
 import { userInfo } from "node:os";
 
-import { ERROR_MESSAGE } from "../constants/index.js";
+import { DEFAULT_USER_NAME } from "../constants/index.js";
 
 export const getOsUserName = () => {
     try {
-        const userName = userInfo().username;
+        const userName = userInfo()?.username || DEFAULT_USER_NAME;
 
-        console.log(userName);
+        return userName;
     } catch {
-        console.error(ERROR_MESSAGE);
+        return DEFAULT_USER_NAME;
     }
 };

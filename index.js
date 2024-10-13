@@ -6,9 +6,10 @@ import {
     showGreeting,
     getCurrentUserName,
     showCurrentDir,
+    showErrorMessage,
 } from "./src/helpers/index.js";
 
-import { ERROR_MESSAGE, DEFAULT_USER_NAME } from "./src/constants/index.js";
+import { DEFAULT_USER_NAME } from "./src/constants/index.js";
 
 const initFileManagerApp = async () => {
     try {
@@ -30,7 +31,7 @@ const initFileManagerApp = async () => {
             showGoodbye(userName);
         });
     } catch {
-        console.error(ERROR_MESSAGE);
+        showErrorMessage();
     }
 };
 

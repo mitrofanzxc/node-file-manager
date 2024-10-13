@@ -1,9 +1,9 @@
-import { ERROR_MESSAGE } from "../constants/index.js";
+import { showErrorMessage } from "./show-error-message.js";
 
 export const closeReadlinePromises = (readlinePromises) => {
     try {
         readlinePromises.close();
     } catch {
-        console.error(ERROR_MESSAGE);
+        showErrorMessage();
     }
 };

@@ -1,6 +1,6 @@
 import { EOL } from "node:os";
 
-import { ERROR_MESSAGE } from "../constants/index.js";
+import { showErrorMessage } from "./show-error-message.js";
 
 export const getEol = () => {
     try {
@@ -8,6 +8,6 @@ export const getEol = () => {
 
         console.log(eolInfo);
     } catch {
-        console.error(ERROR_MESSAGE);
+        showErrorMessage();
     }
 };

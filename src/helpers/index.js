@@ -1,4 +1,5 @@
 export { closeReadlinePromises } from "./close-readline-promises.js";
+export { colorText } from "./color-text.js";
 export { errorHandler } from "./error-handler.js";
 export { getArchitecture } from "./get-architecture.js";
 export { getCpusInfo } from "./get-cpus-info.js";
@@ -9,6 +10,7 @@ export { getOsUserName } from "./get-os-username.js";
 export { isFileExist } from "./is-file-exist.js";
 export { navigateToHomeDir } from "./navigate-to-home-dir.js";
 export { showCurrentDir } from "./show-current-dir.js";
+export { showErrorMessage } from "./show-error-message.js";
 export { showGoodbye } from "./show-goodbye.js";
 export { showGreeting } from "./show-greeting.js";
 export { trimString } from "./trim-string.js";
