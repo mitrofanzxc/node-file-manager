@@ -1,8 +1,8 @@
 import { cpus } from "node:os";
 
-import { showErrorMessage } from "./show-error-message.js";
+import { showErrorMessage } from "../show-error-message.js";
 
-import { GHZ } from "../constants/index.js";
+import { GHZ } from "../../constants/index.js";
 
 export const getCpusInfo = () => {
     try {

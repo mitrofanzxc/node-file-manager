@@ -1,6 +1,6 @@
 import { userInfo } from "node:os";
 
-import { DEFAULT_USER_NAME } from "../constants/index.js";
+import { DEFAULT_USER_NAME } from "../../constants/index.js";
 
 export const getOsUserName = () => {
     try {
