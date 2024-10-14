@@ -5,6 +5,9 @@ import { closeReadlinePromises } from "../close-readline-promises.js";
 import { calcHash } from "../hash/calc-hash.js";
 import { trimString } from "../trim-string.js";
 import { navigationHandler } from "./navigation-handler.js";
+import { zipHandler } from "./zip-handler.js";
+import { basicHandler } from "./basic-handler.js";
+import { osHandler } from "./os-handler.js";
 
 import {
     ErrorMessage,
@@ -22,16 +25,16 @@ export const userInputHandler = async (input, readLinePromises) => {
 
         switch (operationType) {
             case OperationType.os:
-                console.log("=== OperationType.OS ===");
+                osHandler(args);
                 break;
             case BasicOperation[operationType]:
-                console.log("=== BASIC_OPERATIONS ===");
+                basicHandler(operationType, args, currentWorkingDirectory);
                 break;
             case NavigationOperation[operationType]:
-                await navigationHandler(operationType, args);
+                await navigationHandler(operationType, args, currentWorkingDirectory);
                 break;
             case ZipOperation[operationType]:
-                console.log("=== ZIP_OPERATIONS ===");
+                zipHandler(operationType, args);
                 break;
             case OperationType.hash:
                 await calcHash(args);
