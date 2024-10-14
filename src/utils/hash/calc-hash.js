@@ -3,8 +3,9 @@ import { cwd } from "node:process";
 import { createReadStream } from "node:fs";
 const { createHash } = await import("node:crypto");
 
-import { ErrorMessage, ALGORITHM, ENCODING } from "../../constants/index.js";
 import { showErrorMessage } from "../show-error-message.js";
+
+import { ErrorMessage, ALGORITHM, ENCODING } from "../../constants/index.js";
 
 export const calcHash = async (args) => {
     try {
@@ -22,9 +23,9 @@ export const calcHash = async (args) => {
         });
 
         readStream.on("error", () => {
-            showErrorMessage(ErrorMessage.HASH_OPERATION);
+            showErrorMessage(ErrorMessage.HASH_INPUT);
         });
     } catch {
-        showErrorMessage(ErrorMessage.HASH_INPUT);
+        showErrorMessage(ErrorMessage.HASH_OPERATION);
     }
 };

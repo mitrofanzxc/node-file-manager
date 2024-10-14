@@ -30,6 +30,7 @@ export const ErrorMessage = {
         "Navigation invalid input. Please check your path to the file taking into account the current directory.",
     NAVIGATION_OPERATION:
         "Navigation operation failed. Please check your path to the file taking into account the current directory.",
+    NAVIGATION_UP: "You are already in the root directory",
 };
 
 export const DEFAULT_USER_NAME = "Username";
@@ -57,27 +58,27 @@ export const FileType = {
 };
 
 export const OperationType = {
-    OS: "os",
-    HASH: "hash",
-    EXIT: ".exit",
+    os: "os",
+    hash: "hash",
+    exit: ".exit",
 };
 
 export const BasicOperation = {
-    CAT: "cat",
-    ADD: "add",
-    RN: "rn",
-    CP: "cp",
-    MV: "mv",
-    RM: "rm",
+    cat: "cat",
+    add: "add",
+    rn: "rn",
+    cp: "cp",
+    mv: "mv",
+    rm: "rm",
 };
 
 export const NavigationOperation = {
-    UP: "up",
-    CD: "cd",
-    LS: "ls",
+    up: "up",
+    cd: "cd",
+    ls: "ls",
 };
 
 export const ZipOperation = {
-    COMPRESS: "compress",
-    DECOMPRESS: "decompress",
+    compress: "compress",
+    decompress: "decompress",
 };
