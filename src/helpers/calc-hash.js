@@ -3,20 +3,28 @@ import { cwd } from "node:process";
 import { createReadStream } from "node:fs";
 const { createHash } = await import("node:crypto");
 
-import { errorHandler } from "./error-handler.js";
-
 import { ErrorMessage, ALGORITHM, ENCODING } from "../constants/index.js";
+import { showErrorMessage } from "./show-error-message.js";
 
-export const calculateHash = errorHandler(async (fileArguments) => {
-    const [filePath] = fileArguments;
-    const currentWorkingDirectory = cwd();
-    const filePathToCalcHash = join(currentWorkingDirectory, filePath);
+export const calcHash = async (args) => {
+    try {
+        const [filePath] = args;
+        const currentWorkingDirectory = cwd();
+        const filePathToCalcHash = join(currentWorkingDirectory, filePath);
 
-    const readStream = createReadStream(filePathToCalcHash);
-    const hash = createHash(ALGORITHM);
-    const encodedHash = hash.digest(ENCODING);
+        const readStream = createReadStream(filePathToCalcHash);
+        const hash = createHash(ALGORITHM);
 
-    readStream.pipe(hash).on("finish", () => {
-        console.log(`SHA256 hash for file: ${encodedHash}`);
-    });
-}, ErrorMessage.HASH);
+        readStream.pipe(hash).on("finish", () => {
+            const encodedHash = hash.digest(ENCODING);
+
+            console.log(`SHA256 hash for file: ${encodedHash}`);
+        });
+
+        readStream.on("error", () => {
+            showErrorMessage(ErrorMessage.HASH_OPERATION);
+        });
+    } catch {
+        showErrorMessage(ErrorMessage.HASH_INPUT);
+    }
+};

@@ -8,7 +8,7 @@ import { Color } from "../constants/index.js";
 export const showGoodbye = (userName) => {
     try {
         const coloredText = colorText(
-            `\n\nThank you for using File Manager, ${userName}, goodbye!\n\n`,
+            `\n\nThank you for using File Manager, ${userName}, goodbye!\n`,
             Color.GREEN
         );
 
