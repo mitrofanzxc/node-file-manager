@@ -1,4 +1,4 @@
-export { calculateHash } from "./calc-hash.js";
+export { calcHash } from "./calc-hash.js";
 export { closeReadlinePromises } from "./close-readline-promises.js";
 export { colorText } from "./color-text.js";
 export { errorHandler } from "./error-handler.js";

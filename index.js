@@ -1,5 +1,6 @@
 import { createInterface } from "node:readline/promises";
-import { stdin, stdout } from "node:process";
+import { chdir, stdin, stdout } from "node:process";
+import { homedir } from "node:os";
 
 import {
     showGoodbye,
@@ -17,6 +18,7 @@ const initFileManagerApp = async () => {
         const userName = getCurrentUserName();
 
         showGreeting(userName);
+        chdir(homedir());
         showCurrentDir();
 
         const readlinePromises = createInterface({

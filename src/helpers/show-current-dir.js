@@ -10,7 +10,6 @@ export const showCurrentDir = () => {
         const currentWorkingDirectory = cwd();
 
         console.log(colorText(`\nYou are currently in ${currentWorkingDirectory} \n`, Color.CYAN));
-        // stdout.write("> ");
     } catch {
         showErrorMessage();
     }
