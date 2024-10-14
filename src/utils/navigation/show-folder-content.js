@@ -7,8 +7,8 @@ import { ErrorMessage, FileType } from "../../constants/index.js";
 
 export const showFolderContent = async () => {
     try {
-        const currentWorkingDirectoryPath = cwd();
-        const files = await readdir(currentWorkingDirectoryPath, { withFileTypes: true });
+        const currentWorkingDirectory = cwd();
+        const files = await readdir(currentWorkingDirectory, { withFileTypes: true });
 
         const result = files
             .slice()

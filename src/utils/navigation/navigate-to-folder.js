@@ -1,6 +1,8 @@
 import { normalize } from "path";
 import { chdir } from "node:process";
 
+import { showErrorMessage } from "../show-error-message.js";
+
 import { ErrorMessage } from "../../constants/index.js";
 
 export const navigateToFolder = (args) => {
@@ -10,6 +12,6 @@ export const navigateToFolder = (args) => {
 
         chdir(destinationFolderPath);
     } catch {
-        printErrorText(ErrorMessage.NAVIGATION_OPERATION);
+        showErrorMessage(ErrorMessage.NAVIGATION_OPERATION);
     }
 };

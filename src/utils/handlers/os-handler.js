@@ -30,6 +30,7 @@ export const osHandler = async (args) => {
                 break;
             default:
                 showErrorMessage(ErrorMessage.OS_INPUT);
+                break;
         }
     } catch {
         showErrorMessage(ErrorMessage.OS_OPERATION);
