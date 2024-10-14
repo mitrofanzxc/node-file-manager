@@ -1,7 +1,7 @@
 import { readdir } from "node:fs/promises";
 import { cwd } from "node:process";
 
-import { showErrorMessage } from "../show-error-message";
+import { showErrorMessage } from "../show-error-message.js";
 
 import { ErrorMessage, FileType } from "../../constants/index.js";
 

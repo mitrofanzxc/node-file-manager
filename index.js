@@ -1,15 +1,13 @@
 import { createInterface } from "node:readline/promises";
-import { chdir, stdin, stdout } from "node:process";
-import { homedir } from "node:os";
+import { stdin, stdout } from "node:process";
 
-import {
-    showGoodbye,
-    showGreeting,
-    getCurrentUserName,
-    showCurrentDir,
-    showErrorMessage,
-    userInputHandler,
-} from "./src/utils/index.js";
+import { showGoodbye } from "./src/utils/show-goodbye.js";
+import { showGreeting } from "./src/utils/show-greeting.js";
+import { getCurrentUserName } from "./src/utils/os/get-current-username.js";
+import { showCurrentDir } from "./src/utils/show-current-dir.js";
+import { showErrorMessage } from "./src/utils/show-error-message.js";
+import { userInputHandler } from "./src/utils/handlers/user-input-handler.js";
+import { navigateToHomeDir } from "./src/utils/navigation/navigate-to-home-dir.js";
 
 import { ErrorMessage } from "./src/constants/index.js";
 
@@ -18,7 +16,7 @@ const initFileManagerApp = async () => {
         const userName = getCurrentUserName();
 
         showGreeting(userName);
-        chdir(homedir());
+        navigateToHomeDir();
         showCurrentDir();
 
         const readlinePromises = createInterface({
