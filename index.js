@@ -9,7 +9,7 @@ import {
     showCurrentDir,
     showErrorMessage,
     userInputHandler,
-} from "./src/helpers/index.js";
+} from "./src/utils/index.js";
 
 import { ErrorMessage } from "./src/constants/index.js";
 

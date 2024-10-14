@@ -2,23 +2,34 @@ export const ErrorMessage = {
     OPERATION: "Operation failed.",
     UNKNOWN: "Unknown error has occured.",
     INPUT: "Invalid input. Please check your cli command.",
-    PATH: "Invalid path. Please check it.",
-    FILE_NAME: "Invalid filename. Please check it.",
-    DIR_NAME: "Invalid dirname. Please check it.",
-    COPY: "Copy operation failed. Please check your arguments.",
-    CREATE: "Create operation failed. Please check your arguments.",
-    READ: "Create operation failed. Please check your arguments.",
-    MOVE: "Create operation failed. Please check your arguments.",
     HASH_INPUT:
         "Hash invalid input. Please check your path to the file taking into account the current directory.",
     HASH_OPERATION:
         "Hash operation failed. Please check your path to the file taking into account the current directory.",
-    COMPRESS: "Compress operation failed. Please check your arguments.",
-    DECOMPRESS: "Decompress operation failed. Please check your arguments.",
-    ZIP: "Zip operation failed. Please check your arguments.",
-    BASIC: "Basic operation failed. Please check your arguments.",
-    OS: "System operation failed. Please check your arguments.",
-    NAVIGATION: "Navigation operation failed. Please check your arguments.",
+    COMPRESS_INPUT:
+        "Compress invalid input. Please check your path to the file taking into account the current directory.",
+    COMPRESS_OPERATION:
+        "Compress operation failed. Please check your path to the file taking into account the current directory.",
+    DECOMPRESS_INPUT:
+        "Decompress invalid input. Please check your path to the file taking into account the current directory.",
+    DECOMPRESS_OPERATION:
+        "Decompress operation failed. Please check your path to the file taking into account the current directory.",
+    ZIP_INPUT:
+        "Zip invalid input. Please check your path to the file taking into account the current directory.",
+    ZIP_OPERATION:
+        "Zip operation failed. Please check your path to the file taking into account the current directory.",
+    BASIC_INPUT:
+        "Basic invalid input. Please check your path to the file taking into account the current directory.",
+    BASIC_OPERATION:
+        "Basic operation failed. Please check your path to the file taking into account the current directory.",
+    OS_INPUT:
+        "OS invalid input. Please check your path to the file taking into account the current directory.",
+    OS_OPERATION:
+        "OS operation failed. Please check your path to the file taking into account the current directory.",
+    NAVIGATION_INPUT:
+        "Navigation invalid input. Please check your path to the file taking into account the current directory.",
+    NAVIGATION_OPERATION:
+        "Navigation operation failed. Please check your path to the file taking into account the current directory.",
 };
 
 export const DEFAULT_USER_NAME = "Username";

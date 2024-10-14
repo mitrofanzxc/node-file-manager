@@ -1,8 +1,9 @@
 import { cwd } from "node:process";
 
-import { showErrorMessage } from "./show-error-message.js";
-import { closeReadlinePromises } from "./close-readline-promises.js";
-import { calcHash } from "./calc-hash.js";
+import { showErrorMessage } from "../show-error-message.js";
+import { closeReadlinePromises } from "../close-readline-promises.js";
+import { calcHash } from "../hash/calc-hash.js";
+import { trimString } from "../trim-string.js";
 
 import {
     ErrorMessage,
@@ -10,11 +11,11 @@ import {
     BasicOperation,
     NavigationOperation,
     ZipOperation,
-} from "../constants/index.js";
+} from "../../constants/index.js";
 
 export const userInputHandler = async (input, readLinePromises) => {
     try {
-        const [operationType, ...args] = input?.trim()?.split(/\s+/g);
+        const [operationType, ...args] = trimString(input)?.split(/\s+/g);
         const currentWorkingDirectory = cwd();
 
         switch (operationType) {

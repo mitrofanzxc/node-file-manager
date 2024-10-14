@@ -4,7 +4,7 @@ export const trimString = (string = "") => {
             return "";
         }
 
-        return string?.toString()?.trim()?.toLowerCase() || "";
+        return string?.toString()?.trim() || "";
     } catch {
         return string;
     }

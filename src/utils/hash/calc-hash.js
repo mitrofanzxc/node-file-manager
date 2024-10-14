@@ -3,8 +3,8 @@ import { cwd } from "node:process";
 import { createReadStream } from "node:fs";
 const { createHash } = await import("node:crypto");
 
-import { ErrorMessage, ALGORITHM, ENCODING } from "../constants/index.js";
-import { showErrorMessage } from "./show-error-message.js";
+import { ErrorMessage, ALGORITHM, ENCODING } from "../../constants/index.js";
+import { showErrorMessage } from "../show-error-message.js";
 
 export const calcHash = async (args) => {
     try {

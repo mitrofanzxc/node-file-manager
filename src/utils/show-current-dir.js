@@ -1,4 +1,4 @@
-import { cwd, stdout } from "node:process";
+import { cwd } from "node:process";
 
 import { colorText } from "./color-text.js";
 import { showErrorMessage } from "./show-error-message.js";
