@@ -2,10 +2,12 @@ import { arch } from "node:os";
 
 import { showErrorMessage } from "../show-error-message.js";
 
+import { ErrorMessage } from "../../constants/index.js";
+
 export const getArchitecture = () => {
     try {
-        console.info(arch());
+        console.log(arch());
     } catch {
-        showErrorMessage();
+        showErrorMessage(ErrorMessage.OS_OPERATION);
     }
 };

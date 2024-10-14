@@ -22,9 +22,9 @@ export const calcHash = async (args) => {
         });
 
         readStream.on("error", () => {
-            showErrorMessage(ErrorMessage.HASH_OPERATION);
+            showErrorMessage(ErrorMessage.HASH_INPUT);
         });
     } catch {
-        showErrorMessage(ErrorMessage.HASH_INPUT);
+        showErrorMessage(ErrorMessage.HASH_OPERATION);
     }
 };
