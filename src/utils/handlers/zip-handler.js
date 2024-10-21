@@ -10,10 +10,10 @@ export const zipHandler = async (operationType, args) => {
 
         switch (tempOperationType) {
             case ZipOperation.compress:
-                await compress(zipOperationArguments);
+                await compress(args);
                 break;
             case ZipOperation.decompress:
-                await decompress(zipOperationArguments);
+                await decompress(args);
                 break;
             default:
                 showErrorMessage(ErrorMessage.ZIP_INPUT);
